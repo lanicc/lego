@@ -9,11 +9,11 @@ import java.util.concurrent.TimeUnit;
  *
  * @author lan
  */
-class LeakyBucketRateLimiterTest extends RateLimiterTest {
+class TokenBucketRateLimiterTest extends RateLimiterTest {
 
     @Test
     void acquire() {
-        LeakyBucketRateLimiter rateLimiter = new LeakyBucketRateLimiter(2, 100, TimeUnit.MILLISECONDS);
+        TokenBucketRateLimiter rateLimiter = new TokenBucketRateLimiter(2, 100, TimeUnit.MILLISECONDS);
         run(rateLimiter);
     }
 }
