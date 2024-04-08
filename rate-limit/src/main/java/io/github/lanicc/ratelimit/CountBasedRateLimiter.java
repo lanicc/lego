@@ -11,13 +11,13 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * @author lan
  */
-public class CountBasedRateLimiter {
+public class CountBasedRateLimiter implements RateLimiter {
 
     private final int limit;
 
     private final long windowSize;
 
-    private AtomicInteger counter;
+    private final AtomicInteger counter;
 
     private volatile long windowStartTime;
 
@@ -41,11 +41,12 @@ public class CountBasedRateLimiter {
         reset();
     }
 
+    @Override
     public boolean acquire() {
         return acquire(1);
     }
 
-
+    @Override
     public boolean acquire(int permits) {
         if (permits <= 0) {
             throw new IllegalArgumentException("permits must be greater than 0");
