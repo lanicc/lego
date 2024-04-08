@@ -52,12 +52,13 @@ public class CountBasedRateLimiter implements RateLimiter {
             throw new IllegalArgumentException("permits must be greater than 0");
         }
         checkWindow();
-        int i = counter.decrementAndGet();
-        if (i < 0) {
-            counter.incrementAndGet();
-            return false;
+        int c;
+        while ((c = counter.get()) >= permits) {
+            if (counter.compareAndSet(c, c - permits)) {
+                return true;
+            }
         }
-        return true;
+        return false;
     }
 
     private void checkWindow() {
