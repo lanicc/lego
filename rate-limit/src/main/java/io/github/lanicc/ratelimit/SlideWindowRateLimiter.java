@@ -25,11 +25,6 @@ public class SlideWindowRateLimiter implements RateLimiter {
         return rateLimiter.acquire(permits);
     }
 
-    @Override
-    public boolean acquire() {
-        return acquire(1);
-    }
-
     private CountBasedRateLimiter getRateLimiter() {
         long currentTimeMillis = System.currentTimeMillis();
         int idx = Math.toIntExact((currentTimeMillis / 1000) % windowSize);

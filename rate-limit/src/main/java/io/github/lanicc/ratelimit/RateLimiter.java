@@ -7,7 +7,9 @@ package io.github.lanicc.ratelimit;
  */
 public interface RateLimiter {
 
-    boolean acquire();
+    default boolean acquire() {
+        return acquire(1);
+    }
 
     boolean acquire(int permits);
 }

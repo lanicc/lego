@@ -27,19 +27,14 @@ public class TokenBucketRateLimiter implements RateLimiter {
         this.bucketSize = bucketSize;
         this.bucket = new AtomicInteger(bucketSize);
         executor = Executors.newSingleThreadScheduledExecutor();
-        executor.scheduleAtFixedRate(this::fiilToken, 0, rate, unit);
+        executor.scheduleAtFixedRate(this::fillToken, 0, rate, unit);
     }
 
-    private void fiilToken() {
+    private void fillToken() {
         if (bucket.get() < bucketSize) {
             int i = bucket.incrementAndGet();
             log.info("bucket:{}", i);
         }
-    }
-
-    @Override
-    public boolean acquire() {
-        return acquire(1);
     }
 
     @Override

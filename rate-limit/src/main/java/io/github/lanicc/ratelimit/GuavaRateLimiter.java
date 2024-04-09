@@ -17,11 +17,6 @@ public class GuavaRateLimiter implements RateLimiter {
     }
 
     @Override
-    public boolean acquire() {
-        return acquire(1);
-    }
-
-    @Override
     public boolean acquire(int permits) {
         return rateLimiter.acquire(permits) == 0.;
     }

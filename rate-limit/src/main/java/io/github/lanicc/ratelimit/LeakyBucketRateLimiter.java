@@ -41,11 +41,6 @@ public class LeakyBucketRateLimiter implements RateLimiter {
         }
     }
 
-    @Override
-    public boolean acquire() {
-        return acquire(1);
-    }
-
     @SneakyThrows
     @Override
     public boolean acquire(int permits) {

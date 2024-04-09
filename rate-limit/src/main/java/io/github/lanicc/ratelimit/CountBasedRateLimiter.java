@@ -42,11 +42,6 @@ public class CountBasedRateLimiter implements RateLimiter {
     }
 
     @Override
-    public boolean acquire() {
-        return acquire(1);
-    }
-
-    @Override
     public boolean acquire(int permits) {
         if (permits <= 0) {
             throw new IllegalArgumentException("permits must be greater than 0");
