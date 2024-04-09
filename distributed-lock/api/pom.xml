@@ -7,4 +7,6 @@
         <version>${revision}</version>
     </parent>
     <artifactId>lego-distributed-lock-api</artifactId>
+    <packaging>jar</packaging>
+
 </project>

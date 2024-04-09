@@ -7,6 +7,7 @@
         <version>${revision}</version>
     </parent>
     <artifactId>lego-distributed-lock-zk</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>

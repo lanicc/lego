@@ -6,11 +6,11 @@
     <parent>
         <groupId>io.github.lanicc</groupId>
         <artifactId>lego-distributed-lock</artifactId>
-        <version>1.0</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>lego-distributed-lock-db</artifactId>
-
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
