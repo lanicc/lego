@@ -5,21 +5,28 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.github.lanicc</groupId>
-        <artifactId>lego-rate-limit</artifactId>
-        <version>${revision}</version>
+        <artifactId>lego-distributed-lock</artifactId>
+        <version>1.0</version>
     </parent>
 
-    <artifactId>lego-rate-limit-redisson</artifactId>
+    <artifactId>lego-distributed-lock-db</artifactId>
+
 
     <dependencies>
         <dependency>
             <groupId>io.github.lanicc</groupId>
-            <artifactId>lego-rate-limit-api</artifactId>
+            <artifactId>lego-distributed-lock-api</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.redisson</groupId>
-            <artifactId>redisson</artifactId>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

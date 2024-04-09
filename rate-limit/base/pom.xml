@@ -5,22 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.github.lanicc</groupId>
-        <artifactId>rate-limit</artifactId>
+        <artifactId>lego-rate-limit</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>rate-limit-base</artifactId>
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <artifactId>lego-rate-limit-base</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>io.github.lanicc</groupId>
-            <artifactId>rate-limit-api</artifactId>
+            <artifactId>lego-rate-limit-api</artifactId>
         </dependency>
     </dependencies>
 
