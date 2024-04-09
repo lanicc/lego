@@ -24,6 +24,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>io.github.lanicc</groupId>
+                <artifactId>rate-limit-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.18.26</version>

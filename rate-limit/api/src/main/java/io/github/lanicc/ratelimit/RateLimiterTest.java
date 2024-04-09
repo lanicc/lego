@@ -1,24 +1,21 @@
 package io.github.lanicc.ratelimit;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
- * Created on 2024/4/8.
+ * Created on 2024/4/9.
  *
  * @author lan
  */
 @Slf4j
 class RateLimiterTest {
 
-    void run(RateLimiter rateLimiter) {
+    protected void run(RateLimiter rateLimiter) {
         ExecutorService pool = Executors.newFixedThreadPool(3);
         for (int i = 0; i < 10; i++) {
             pool.execute(() -> {

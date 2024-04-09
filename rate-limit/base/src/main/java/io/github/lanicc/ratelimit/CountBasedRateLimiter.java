@@ -1,6 +1,5 @@
 package io.github.lanicc.ratelimit;
 
-import javax.annotation.Nullable;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -25,7 +24,7 @@ public class CountBasedRateLimiter implements RateLimiter {
         this(limit, 1, TimeUnit.SECONDS);
     }
 
-    public CountBasedRateLimiter(int limit, long windowSize, @Nullable TimeUnit unit) {
+    public CountBasedRateLimiter(int limit, long windowSize, TimeUnit unit) {
         if (limit <= 0) {
             throw new IllegalArgumentException("limit must be greater than 0");
         }
