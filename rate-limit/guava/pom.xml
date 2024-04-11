@@ -9,7 +9,7 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>rate-limit-guava</artifactId>
+    <artifactId>lego-rate-limit-guava</artifactId>
 
     <dependencies>
         <dependency>
