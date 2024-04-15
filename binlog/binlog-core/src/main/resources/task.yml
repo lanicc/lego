@@ -1,0 +1,21 @@
+destination: c
+filter:
+metaManagerImpl: io.github.lanicc.binlog.core.reader.ExampleReader
+metaManagerConfig:
+  hostname: 127.0.0.1
+  port: 3306
+  username: root
+  password: 123456
+eventListenerImpl: io.github.lanicc.binlog.core.reader.ExampleReader
+eventListenerConfig:
+  hostname: 127.0.0.1
+  port: 3306
+  username: root
+  password: 123456
+binlogReaderImpl: io.github.lanicc.binlog.core.reader.ExampleReader
+binlogReaderConfig:
+  hostname: 127.0.0.1
+  port: 3306
+  username: root
+  password: 123456
+

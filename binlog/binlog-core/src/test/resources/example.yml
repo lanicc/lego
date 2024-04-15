@@ -1,0 +1,20 @@
+destination: c
+filter:
+metaManagerImpl: io.github.lanicc.binlog.core.meta.TableMetaMemoryMixedMetaManager
+metaManagerConfig:
+  hostname: 127.0.0.1
+  port: 3308
+  username: root
+  password: lanicc@22
+eventListenerImpl:
+eventListenerConfig:
+  hostname: 127.0.0.1
+binlogReaderImpl:
+binlogReaderConfig:
+  hostname: 127.0.0.1
+  port: 3308
+  username: root
+  password: lanicc@22
+  binlogFilename: mysql-bin.000007
+  binlogPosition: 12859
+
