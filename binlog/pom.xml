@@ -10,5 +10,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>binlog-core</module>
+        <module>binlog-connect-rocketmq</module>
     </modules>
 </project>

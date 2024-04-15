@@ -19,6 +19,6 @@ class TaskControllerTest {
         InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("example.yml");
         TaskConfig taskConfig = new Yaml().loadAs(inputStream, TaskConfig.class);
         new TaskController().load(taskConfig);
-        TimeUnit.SECONDS.sleep(20);
+        TimeUnit.HOURS.sleep(20);
     }
 }

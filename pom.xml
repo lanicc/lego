@@ -35,6 +35,11 @@
                 <artifactId>lego-distributed-lock-api</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>io.github.lanicc</groupId>
+                <artifactId>lego-binlog-core</artifactId>
+                <version>${revision}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.yaml</groupId>
@@ -50,6 +55,16 @@
                 <groupId>com.zendesk</groupId>
                 <artifactId>mysql-binlog-connector-java</artifactId>
                 <version>0.25.1</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.1.108.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>5.2.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.curator</groupId>

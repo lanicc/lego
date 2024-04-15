@@ -2,6 +2,7 @@ package io.github.lanicc.binlog.core.util;
 
 import java.util.Objects;
 import java.util.Properties;
+import java.util.function.Supplier;
 
 /**
  * Created on 2024/4/10.
@@ -40,5 +41,17 @@ public final class PropertiesUtil {
         }
         String value = Objects.toString(o, null);
         return value == null ? defaultValue : Long.parseLong(value);
+    }
+
+
+    @SuppressWarnings("unchecked")
+    public static <T> T get(Properties properties, String key, T defaultValue) {
+        T value = (T) properties.get(key);
+        return value == null ? defaultValue : value;
+    }
+    @SuppressWarnings("unchecked")
+    public static <T> T get(Properties properties, String key, Supplier<T> supplier) {
+        T value = (T) properties.get(key);
+        return value == null ? supplier.get() : value;
     }
 }
