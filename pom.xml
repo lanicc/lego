@@ -12,6 +12,7 @@
         <module>rate-limit</module>
         <module>distributed-lock</module>
         <module>binlog</module>
+        <module>drools</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -135,6 +136,11 @@
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
                 <version>5.9.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-compiler</artifactId>
+                <version>7.46.0.Final</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

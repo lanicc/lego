@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <!--
+        name: kbase的名称
+        packages: kbase下的package
+        default: 默认的kbase
+    -->
+    <kbase name="rules" packages="droolsRule" default="true">
+        <!--
+            name: ksession的名称,需要唯一
+            type: ksession的类型
+            default: 默认的ksession
+        -->
+        <ksession name="rulesSession" default="true"/>
+    </kbase>
+</kmodule>
