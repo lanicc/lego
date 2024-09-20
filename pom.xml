@@ -9,9 +9,7 @@
     <version>${revision}</version>
     <name>lego</name>
     <modules>
-        <module>rate-limit</module>
-        <module>distributed-lock</module>
-        <module>binlog</module>
+        <module>datatunnel</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -25,22 +23,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>io.github.lanicc</groupId>
-                <artifactId>lego-rate-limit-api</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.lanicc</groupId>
-                <artifactId>lego-distributed-lock-api</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.lanicc</groupId>
-                <artifactId>lego-binlog-core</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
             <dependency>
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
@@ -130,6 +112,11 @@
                 <groupId>com.h2database</groupId>
                 <artifactId>h2</artifactId>
                 <version>2.2.220</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.auto.service</groupId>
+                <artifactId>auto-service</artifactId>
+                <version>1.1.1</version>
             </dependency>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>

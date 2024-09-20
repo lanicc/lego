@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.lanicc</groupId>
+        <artifactId>datatunnel</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <artifactId>datatunnel-engine</artifactId>
+    <name>datatunnel-engine</name>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.lanicc</groupId>
+            <artifactId>datatunnel-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.lanicc</groupId>
+            <artifactId>source-cdc-mysql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.lanicc</groupId>
+            <artifactId>source-file</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.lanicc</groupId>
+            <artifactId>sink-log</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.lanicc</groupId>
+            <artifactId>transform-fieldmapper</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>

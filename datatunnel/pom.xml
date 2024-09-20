@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.lanicc</groupId>
+        <artifactId>lego</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <artifactId>datatunnel</artifactId>
+    <name>datatunnel</name>
+
+    <packaging>pom</packaging>
+    <modules>
+        <module>datatunnel-api</module>
+        <module>datatunnel-source</module>
+        <module>datatunnel-sink</module>
+        <module>datatunnel-engine</module>
+        <module>datatunnel-transform</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.lanicc</groupId>
+                <artifactId>datatunnel-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lanicc</groupId>
+                <artifactId>sink-log</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lanicc</groupId>
+                <artifactId>source-file</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lanicc</groupId>
+                <artifactId>source-cdc-mysql</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lanicc</groupId>
+                <artifactId>transform-fieldmapper</artifactId>
+                <version>${revision}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
